@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<DockerComposeProjectPath>../../../docker-compose.dcproj</DockerComposeProjectPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+		<PackageReference Include="MongoDB.Driver" Version="2.14.0" />
+		<PackageReference Include="System.Linq" Version="4.3.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="MongoDB.Driver" />
+	  <None Remove="Controllers\" />
+	  <None Remove="Entities\" />
+	  <None Remove="Data\" />
+	  <None Remove="Repositories\" />
+	  <None Remove="System.Linq" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Controllers\" />
+	  <Folder Include="Entities\" />
+	  <Folder Include="Data\" />
+	  <Folder Include="Repositories\" />
+	</ItemGroup>
+</Project>
